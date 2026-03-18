@@ -1,0 +1,5 @@
+CHUNK_SIZE = 500
+CHUNK_OVERLAP = 100
+EMBEDDING_MODEL = "BAAI/bge-small-en-v1.5"
+LLM_MODEL = "llama-3.1-8b-instant"
+TOP_K = 6
