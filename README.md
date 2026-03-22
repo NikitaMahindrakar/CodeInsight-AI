@@ -39,14 +39,22 @@ GitHub Repo URL
 ```
  
 # Tech Stack
-Language: Python
-LLM: Groq (LLaMA 3.x)
-Framework: LangChain
-Vector DB: FAISS
-Embeddings: HuggingFace (BGE / MiniLM)
-Frontend: Streamlit
-Data Source: GitHub REST API
-Concurrency: ThreadPoolExecutor
+
+**Language**: Python
+
+**LLM**: Groq (LLaMA 3.x)
+
+**Framework**: LangChain
+
+**Vector DB**: FAISS
+
+**Embeddings**: HuggingFace (BGE / MiniLM)
+
+**Frontend**: Streamlit
+
+**Data Source**: GitHub REST API
+
+**Concurrency**: ThreadPoolExecutor
 
 # Installation
 ```bash
