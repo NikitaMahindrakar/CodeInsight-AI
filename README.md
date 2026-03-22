@@ -10,7 +10,7 @@ An AI-powered tool that allows you to ask questions about any GitHub repository 
 🧩 Modular, scalable, production-ready architecture
 
 # Architecture
-
+```bash
 GitHub Repo URL
       │
       ▼
@@ -30,7 +30,7 @@ GitHub Repo URL
       │
       ▼
  app.py               ← Streamlit UI (sidebar + chat interface)
-
+```
  
 # Tech Stack
 Language: Python
@@ -58,3 +58,7 @@ GITHUB_TOKEN=your_github_token
 
 # Run the App
 streamlit run app.py
+
+# Demo - Video Walkthrough
+
+https://drive.google.com/file/d/19yNabmZyy5BnJQzSVsZtutYKb73rM3de/view?usp=sharing
