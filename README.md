@@ -2,12 +2,18 @@
 An AI-powered tool that allows you to ask questions about any GitHub repository and get intelligent, context-aware answers using Retrieval-Augmented Generation (RAG).
 
 # Features
-💬 Chat with any GitHub repository in natural language
-⚡ Fast parallel GitHub API ingestion (no cloning required)
-🧠 Context-aware answers using RAG (LangChain + FAISS + LLM)
-📂 Source attribution (see exact code snippets used)
-🚀 Interactive Streamlit UI (ChatGPT-like experience)
-🧩 Modular, scalable, production-ready architecture
+
+**Repo Indexing** — fetches all code files from any public GitHub repository
+
+**Semantic Search** — splits files into chunks, embeds them with OpenAI, stores in FAISS vector store
+
+**Chat Interface** — ask questions in plain English, get answers grounded in the actual code
+
+**Source References** — every answer shows which files and snippets were used
+
+**Session Memory** — chat history persists during your session
+
+**One-click Reset** — clear the current repo and start fresh
 
 # Architecture
 ```bash
@@ -43,21 +49,34 @@ Data Source: GitHub REST API
 Concurrency: ThreadPoolExecutor
 
 # Installation
-
+```bash
 pip install -U streamlit langchain langchain-core langchain-community langchain-huggingface langchain-groq faiss-cpu python-dotenv requests4
-
+```
 # Setup
 
 Create a .env file:
-
+```bash
 GROQ_API_KEY=your_groq_api_key
-
+```
 (Optional for higher rate limits)
-
+```bash
 GITHUB_TOKEN=your_github_token
-
+```
 # Run the App
+```bash
 streamlit run app.py
+```
+The app opens at http://localhost:8501 automatically.
+
+# Limitations
+
+Only works with public GitHub repositories
+
+Very large repos (1000+ files) may be slow to index and exceed token limits
+
+Answers are only as good as the retrieved chunks — deeply nested logic may not be captured
+
+The vector store is in-memory and is rebuilt on every new repo analysis
 
 # Demo - Video Walkthrough
 
